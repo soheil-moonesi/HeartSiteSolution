@@ -3,7 +3,6 @@
     public class User
     {
 
-        //todo: add Client info to List for using in next part of application
         private int? _age;
 
         public string Name { get; set; }
@@ -12,7 +11,7 @@
             get { return _age;}
             set
             {
-                if (Age > 18)
+                if (value < 100)
                 {
                     _age = value;
                 }

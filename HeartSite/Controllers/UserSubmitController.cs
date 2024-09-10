@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace HeartSite.Controllers
 {
     [Route("api/[controller]")]
@@ -10,7 +11,9 @@ namespace HeartSite.Controllers
         [HttpPost]
         public IActionResult UserSubmit([FromQuery] User userinfo)
         {
+            UserManager.users.Add(userinfo);
             return Ok($"{userinfo.Name} {userinfo.Age}");
-    }
+         }
+        
     }
 }
