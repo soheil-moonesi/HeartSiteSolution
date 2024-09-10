@@ -2,6 +2,7 @@
 {
     public class User
     {
+        //todo: p1 create new Schema for All class 
 
         private int? _age;
         public string Name { get; set; }
@@ -16,7 +17,7 @@
                 }
                 else
                 { 
-                    //todo: throw exception for showing error in swagger
+                    //todo: px throw exception for showing error in swagger
                 throw new Exception("Age must be greater than 18");         }
 
             }
