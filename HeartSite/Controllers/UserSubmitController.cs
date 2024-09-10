@@ -10,7 +10,7 @@ namespace HeartSite.Controllers
         [HttpPost]
         public IActionResult UserSubmit([FromQuery] User userinfo)
         {
-            return Ok(userinfo.Name);
-        }
+            return Ok($"{userinfo.Name} {userinfo.Age}");
+    }
     }
 }
