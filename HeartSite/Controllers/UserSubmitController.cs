@@ -7,11 +7,10 @@ namespace HeartSite.Controllers
     [ApiController]
     public class UserSubmitController : ControllerBase
     {
-        //todo: it must use user class for getting user info and return submit string
         [HttpPost]
-        public IActionResult UserSubmit([FromQuery] string name)
+        public IActionResult UserSubmit([FromQuery] User userinfo)
         {
-            return Ok(name);
+            return Ok(userinfo.Name);
         }
     }
 }
