@@ -1,10 +1,14 @@
-﻿namespace HeartSite
+﻿
+namespace HeartSite
 {
     public class User
     {
         //todo: p1 create new Schema for All class 
-
+        //todo: p1-2 seed data for test
+        public int Id { get; set; }
         private int? _age;
+        internal List<Comment> comment;
+
         public string Name { get; set; }
         public int? Age
         {
@@ -27,5 +31,7 @@
         }
         public string? Job { get;set ; }
         public string? City { get; set; }
+
+        public ICollection<Comment> Comments { get; set; } 
     }
 }
