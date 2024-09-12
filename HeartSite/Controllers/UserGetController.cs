@@ -28,8 +28,10 @@ namespace HeartSite.Controllers
         [HttpGet("FilterByWord/{word}")]
         public IActionResult UserFilter([FromRoute]string word)
         {
-           UserManager.UserNameFilterByWords(word);
-           return Ok(UserManager.users);
+          var Result = UserManager.UserNameFilterByWords(word);
+
+
+           return Ok(Result);
         }
 
     }
