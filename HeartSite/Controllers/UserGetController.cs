@@ -7,16 +7,22 @@ namespace HeartSite.Controllers
     [ApiController]
     public class UserGetController : ControllerBase
     {
-        //todo: p1 create method for search and find user info by name
-        //Todo: p2 create Plan for adding and getting User Data
+        //todo: p1 get all users info
         //todo: px error handelling for client input
 
-        [HttpGet("{index}")]
+        [HttpGet("{name}")]
         //[HttpGet("{index}/{detail}")]  //template for getting more info from route
-        public IActionResult UserGet([FromRoute]string index)
+        public IActionResult UserGet([FromRoute]string name)
         {
-            
-            return Ok(UserManager.users[int.Parse(index)].Name);
+           var UserIndex = UserManager.SearchIdByName(name);
+
+            return Ok(UserManager.users[UserIndex].Age);
+        }
+
+        [HttpGet("all")]
+        public IActionResult AllUserGet()
+        {
+          return  Ok(UserManager.users);
         }
     }
 }
