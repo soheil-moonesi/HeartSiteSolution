@@ -25,13 +25,19 @@ namespace HeartSite.Controllers
           return  Ok(UserManager.users);
         }
 
-        [HttpGet("FilterByWord/{word}")]
-        public IActionResult UserFilter([FromRoute]string word)
+        [HttpGet("UserNameFilterByWords/{word}")]
+        public IActionResult UserFilterNames([FromRoute]string word)
         {
           var Result = UserManager.UserNameFilterByWords(word);
 
-
            return Ok(Result);
+        }
+
+        [HttpGet("UserFilterByWord/{word}")]
+        public IActionResult UserFilterByWord([FromRoute] string word)
+        {
+           var Result= UserManager.UserFilterByWord(word);
+            return Ok(Result);
         }
 
     }

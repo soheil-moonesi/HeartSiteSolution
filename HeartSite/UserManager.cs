@@ -43,12 +43,14 @@ namespace HeartSite
 
         public static List<string> UserNameFilterByWords(string word)
         {
-        //var UserNames =    users.FindAll(x => x.Name.Contains(word));
-
         var UserNames= UserManager.users.Where(x => x.Name.Contains(word)).Select(x => x.Name).ToList();
+        return UserNames;
+        }
 
-
-            return UserNames;
+        public static List<User> UserFilterByWord(string word)
+        {
+            var Users = UserManager.users.FindAll(x => x.Name.Contains(word)).ToArray();
+            return Users.ToList();
         }
     }
 }
