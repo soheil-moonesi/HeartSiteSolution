@@ -13,7 +13,7 @@ namespace HeartSite.Controllers
         {
             UserManager.users.Add(userinfo);
             return Ok($"{userinfo.Name} {userinfo.Age}");
-         }
+        }
         
     }
 }

@@ -1,11 +1,17 @@
 ﻿
+using Microsoft.AspNetCore.Mvc.ModelBinding;
+
 namespace HeartSite
 {
     public class User
     {
-        //todo: p1 create new Schema for All class 
-        //todo: p1-2 seed data for test
-        public int Id { get; set; }
+        //todo: px structure for reply and comment
+        //todo: px create separate User Client DTO and Server DTO
+
+        private int _IdCounter;
+        [BindNever]
+        public int Id { get; private set; }
+
         private int? _age;
         internal List<Comment> comment;
 
@@ -32,6 +38,13 @@ namespace HeartSite
         public string? Job { get;set ; }
         public string? City { get; set; }
 
-        public ICollection<Comment> Comments { get; set; } 
+        public ICollection<Comment>? Comments { get; set; } 
+
+
+
+        public User() { 
+            _IdCounter++;
+            Id = _IdCounter++;
+        }
     }
 }

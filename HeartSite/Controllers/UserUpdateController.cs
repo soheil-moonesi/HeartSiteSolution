@@ -7,11 +7,14 @@ namespace HeartSite.Controllers
     [ApiController]
     public class UserUpdateController : ControllerBase
     {
-        //todo: p3 create plan for getting index and updating user data
         [HttpPost]
         public IActionResult UserUpdate([FromBody] User userinfo)
         {
-            UserManager.users[0] = userinfo;
+           int UserIndex =  UserManager.SearchIdByName(userinfo.Name);
+
+
+            UserManager.users[UserIndex] = userinfo;
+
             return Ok($"{userinfo.Name} {userinfo.Age}");
         }   
     }

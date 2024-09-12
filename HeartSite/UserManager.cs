@@ -10,7 +10,7 @@ namespace HeartSite
         {
             User user1 = new User
             {
-                Id = 1,
+               
                 Name = "Soheil",
                 Age = 30,
                 comment = new List<Comment>()
@@ -23,7 +23,7 @@ namespace HeartSite
 
             User user2 = new User
             {
-                Id = 2,
+                
                 Name = "Sepehr",
                 Age = 22,
                 comment = new List<Comment>()
@@ -33,7 +33,12 @@ namespace HeartSite
             };
             users.Add(user2);
 
+        
 
+        }
+        public static int SearchIdByName(string name)
+        {
+            return users.FindIndex(x => x.Name == name);
         }
     }
 }
