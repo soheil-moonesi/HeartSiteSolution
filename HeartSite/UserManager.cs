@@ -40,5 +40,11 @@ namespace HeartSite
         {
             return users.FindIndex(x => x.Name == name);
         }
+
+        public static string UserNameFilterByWords(string word)
+        {
+        var UserNames =    users.FindAll(x => x.Name.Contains(word));
+        return "test";
+        }
     }
 }

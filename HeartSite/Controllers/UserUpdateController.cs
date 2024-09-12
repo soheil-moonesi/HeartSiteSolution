@@ -12,7 +12,6 @@ namespace HeartSite.Controllers
         {
            int UserIndex =  UserManager.SearchIdByName(userinfo.Name);
 
-
             UserManager.users[UserIndex] = userinfo;
 
             return Ok($"{userinfo.Name} {userinfo.Age}");
