@@ -7,8 +7,8 @@ namespace HeartSite.Controllers
     [ApiController]
     public class UserGetController : ControllerBase
     {
+        //todo: p1 set database connection
         //todo: px error handelling for client input
-        //todo: p1 create structure for filter user names with words
 
         [HttpGet("GetByName/{name}")]
         //[HttpGet("{index}/{detail}")]  //template for getting more info from route
