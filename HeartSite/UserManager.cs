@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc.Diagnostics;
+﻿using HeartSite.DAL;
+using Microsoft.AspNetCore.Mvc.Diagnostics;
+using Microsoft.EntityFrameworkCore;
+using System;
 
 namespace HeartSite
 {
@@ -6,7 +9,7 @@ namespace HeartSite
     {
         public static List<User> users = new List<User>();
        
-        public static void SeedData()
+        public static void SeedData(HeartSiteDataBase Context)
         {
             User user1 = new User
             {
@@ -21,6 +24,7 @@ namespace HeartSite
             };
             users.Add(user1);
 
+
             User user2 = new User
             {
                 
@@ -33,7 +37,6 @@ namespace HeartSite
             };
             users.Add(user2);
 
-        
 
         }
         public static int SearchIdByName(string name)

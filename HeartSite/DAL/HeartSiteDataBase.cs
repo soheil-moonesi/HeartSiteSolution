@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace HeartSite.DAL
 {
@@ -8,9 +9,9 @@ namespace HeartSite.DAL
         public DbSet<User> Users { get; set; }
 
         public HeartSiteDataBase(DbContextOptions<HeartSiteDataBase> options) : base(options)
-     {
-
-     }
+        {
+           
+        }
 
 
 

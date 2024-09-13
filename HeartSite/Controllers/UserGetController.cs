@@ -7,7 +7,6 @@ namespace HeartSite.Controllers
     [ApiController]
     public class UserGetController : ControllerBase
     {
-        //todo: p1 set database connection
         //todo: px error handelling for client input
 
         [HttpGet("GetByName/{name}")]

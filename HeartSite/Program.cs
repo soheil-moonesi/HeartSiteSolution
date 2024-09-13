@@ -17,9 +17,8 @@ builder.Services.AddDbContext<HeartSiteDataBase>(options =>
 }
 );
 var app = builder.Build();
-//Add Seed Data in Initialization Process
-UserManager.SeedData();
-// Configure the HTTP request pipeline.
+
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
