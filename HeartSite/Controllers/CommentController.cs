@@ -5,6 +5,8 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HeartSite.Controllers
 {
+
+    //todo: p1 Rest all Database because Tables is not sync with structure
     [Route("api/[controller]")]
     [ApiController]
     public class CommentController : ControllerBase

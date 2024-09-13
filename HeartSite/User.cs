@@ -32,15 +32,9 @@ namespace HeartSite
 
             }
 
-
-
         }
         public string? Job { get;set ; }
         public string? City { get; set; }
-
-        public ICollection<Comment>? Comments { get; set; } 
-
-
 
         public User() { 
             _IdCounter++;
