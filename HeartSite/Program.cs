@@ -16,6 +16,14 @@ builder.Services.AddDbContext<HeartSiteDataBase>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 }
 );
+
+using (var context = new TestDataBase(new DbContextOptions<TestDataBase>()))
+{
+    context.Database.EnsureCreated();
+    context.Database.EnsureDeleted();
+}
+
+
 var app = builder.Build();
 
 

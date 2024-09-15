@@ -3,14 +3,12 @@
     public class CommentTest
     {
         public int Id { get; set; }
-        public string Text { get; set; }
+        public string TextTest { get; set; }
 
-        public int PersonId { get; set; }
+        public int PersonTestId { get; set; }
 
-        public Person Person { get; set; }
+        public Person PersonTest { get; set; }
 
-        public Category Category { get; set; }
-        public int CategoryId { get; set; }
     }
 }
 
