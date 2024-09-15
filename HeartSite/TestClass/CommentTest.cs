@@ -7,7 +7,7 @@
 
         public int PersonTestId { get; set; }
 
-        public Person PersonTest { get; set; }
+        public PersonTest PersonTest { get; set; }
 
     }
 }
