@@ -5,6 +5,9 @@ namespace HeartSite.DAL
 {
     public class HeartSiteDataBase : DbContext
     {
+
+        //todo: p1 create database for test
+        //todo: p1 create class for test
         public DbSet<Comment> Comments { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Person> Persons { get; set; }
