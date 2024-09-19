@@ -17,11 +17,16 @@ builder.Services.AddDbContext<HeartSiteDataBase>(options =>
 }
 );
 
-using (var context = new TestDataBase(new DbContextOptions<TestDataBase>()))
+builder.Services.AddDbContext<TestDataBase>(options =>
 {
-    context.Database.EnsureCreated();
-    context.Database.EnsureDeleted();
-}
+    options.UseSqlServer(builder.Configuration.GetConnectionString("Data Source=.;Initial Catalog=TestDataBase;Integrated Security=True;TrustServerCertificate=True"));
+});
+
+//using (var context = new TestDataBase(new DbContextOptions<TestDataBase>()))
+//{
+//    context.Database.EnsureDeleted();
+//    context.Database.EnsureCreated();
+//}
 
 
 var app = builder.Build();
